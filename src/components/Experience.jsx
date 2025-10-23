@@ -11,8 +11,8 @@ const Experience = () => (
       <li>
         <strong>Research Assistant</strong>, Oslo Metropolitan University — Mar 2024 – Jul 2025
         <ul>
-          <li>Collected and managed data for eye-gaze research; calibrated sensors and ensured data quality</li>
-          <li>Increased participant enrolment by 176% and improved follow-up/retention rates</li>
+          <li>- Collected and managed data for eye-gaze research; calibrated sensors and ensured data quality.
+          -Increased participant enrolment by 176% and improved follow-up/retention rates.</li>
         </ul>
       </li>
       <li>

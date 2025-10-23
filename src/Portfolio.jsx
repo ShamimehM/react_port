@@ -8,7 +8,7 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Certifications from './components/Certfications';
 import Contact from './components/Contact';
-
+ 
 const Portfolio = () => (
   <div>
     <Hero />
