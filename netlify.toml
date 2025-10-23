@@ -9,3 +9,10 @@
   status = 200
 
 
+# Netlify Secrets Scanning configuration
+# We explicitly omit benign keys that are expected to appear in code/output.
+# Do NOT omit real secrets like SUPABASE_SERVICE_ROLE_KEY.
+[secrets_scan]
+  omit_keys = ["MEDIA_BUCKET", "DOCUMENTS_BUCKET"]
+
+
