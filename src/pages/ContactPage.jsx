@@ -8,10 +8,16 @@ const ContactPage = () => {
   const [message, setMessage] = useState('');
   const [error, setError] = useState('');
   const [status, setStatus] = useState('');
+  const [debug, setDebug] = useState('');
   const [ts, setTs] = useState(0);
+  const [debugMode, setDebugMode] = useState(false);
 
   useEffect(() => {
     setTs(Date.now());
+    try {
+      const params = new URLSearchParams(window.location.search);
+      setDebugMode(params.has('debug'));
+    } catch {}
   }, []);
 
   const handleSubmit = async (e) => {
@@ -29,10 +35,14 @@ const ContactPage = () => {
     try {
       const res = await fetch('/api/contact', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, email, phone, message, source_path: window.location.pathname, _hp: '', _ts: ts })
+        headers: { 'Content-Type': 'application/json', 'x-debug': debugMode ? '1' : '0' },
+        body: JSON.stringify({ name, email, phone, message, source_path: window.location.pathname, _hp: '', _ts: ts, _debug: debugMode ? 1 : 0 })
       });
-      if (!res.ok) throw new Error('Failed');
+      if (!res.ok) {
+        const text = await res.text().catch(() => '');
+        setDebug(`HTTP ${res.status}\n${text || ''}`.trim());
+        throw new Error('Failed');
+      }
       setStatus('Message sent. Thank you!');
       setName(''); setEmail(''); setPhone(''); setMessage('');
     } catch (err) {
@@ -48,6 +58,9 @@ const ContactPage = () => {
         <p>Leave your message and your email address or phone number. I will get back to you.</p>
 
         {error && <div className="form-error" role="alert">{error}</div>}
+        {(import.meta?.env?.MODE === 'development' || debugMode) && debug && (
+          <pre style={{ background:'#fee', color:'#900', padding:'8px', borderRadius:'6px', overflow:'auto' }}>{debug}</pre>
+        )}
         {status && <div className="form-status" aria-live="polite">{status}</div>}
 
         <form onSubmit={handleSubmit} noValidate>
