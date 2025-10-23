@@ -43,10 +43,10 @@ const ContactPage = () => {
         setDebug(`HTTP ${res.status}\n${text || ''}`.trim());
         throw new Error('Failed');
       }
-      setStatus('Message sent. Thank you!');
+      setStatus('Message sent. Thank you! :)');
       setName(''); setEmail(''); setPhone(''); setMessage('');
     } catch (err) {
-      setError('Something went wrong. Please try again later.');
+      setError('Something went wrong. Please try again later! :(');
       setStatus('');
     }
   };
