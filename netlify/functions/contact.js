@@ -30,9 +30,11 @@ export async function handler(event) {
   try {
     const headers = event.headers || {};
     const ua = headers['user-agent'] || '';
+    const debugEnabled = headers['x-debug'] === '1';
 
     const body = JSON.parse(event.body || '{}');
-    const { name = '', email = '', phone = '', message = '', source_path = '/', _hp = '', _ts } = body;
+    const { name = '', email = '', phone = '', message = '', source_path = '/', _hp = '', _ts, _debug } = body;
+    const effectiveDebug = debugEnabled || _debug === 1 || _debug === '1';
 
     // basic validation
     if (!message || (String(message).trim().length === 0)) {
@@ -62,13 +64,24 @@ export async function handler(event) {
     });
     if (error) {
       console.error('supabase insert error', error);
+      if (effectiveDebug) {
+        return {
+          statusCode: 500,
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ stage: 'insert', message: error.message, details: error.details, hint: error.hint })
+        };
+      }
       return { statusCode: 500, body: 'Failed to save' };
     }
 
     return { statusCode: 202, body: 'ok' };
   } catch (e) {
     console.error(e);
-    return { statusCode: 500, body: 'Server error' };
+    const isJson = typeof e?.message === 'string';
+    return {
+      statusCode: 500,
+      body: isJson ? e.message : 'Server error'
+    };
   }
 }
 
