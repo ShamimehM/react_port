@@ -1,5 +1,5 @@
 import { createClient } from '@supabase/supabase-js';
-import isbot from 'isbot';
+import { isbot as isBot } from 'isbot';
 
 const { SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY } = process.env;
 const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, {
@@ -13,7 +13,7 @@ export async function handler(event) {
   try {
     const headers = event.headers || {};
     const ua = headers['user-agent'] || '';
-    const bot = isbot(ua);
+    const bot = isBot(ua);
     const { path = '/' } = JSON.parse(event.body || '{}');
 
     const { error } = await supabase.rpc('increment_page_view', { p_path: path, p_is_bot: bot });

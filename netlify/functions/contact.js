@@ -1,6 +1,6 @@
 import { createClient } from '@supabase/supabase-js';
 import crypto from 'node:crypto';
-import isbot from 'isbot';
+import { isbot as isBot } from 'isbot';
 
 const { SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, IP_HASH_SALT } = process.env;
 
@@ -56,7 +56,7 @@ export async function handler(event) {
 
     const ip = getIpFromHeaders(headers);
     const ip_hash = hashIp(ip);
-    const botUa = isbot(ua);
+    const botUa = isBot(ua);
     const is_bot = Boolean(botUa || isFast);
 
     const { error } = await supabase.from('contacts').insert({
