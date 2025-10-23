@@ -33,7 +33,7 @@ const ContactPage = () => {
     setStatus('Sending...');
     setError('');
     try {
-      const res = await fetch('/api/contact', {
+      const res = await fetch('/.netlify/functions/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'x-debug': debugMode ? '1' : '0' },
         body: JSON.stringify({ name, email, phone, message, source_path: window.location.pathname, _hp: '', _ts: ts, _debug: debugMode ? 1 : 0 })
