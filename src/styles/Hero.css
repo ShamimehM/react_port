@@ -3,8 +3,9 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  height: 100vh;
-  margin-top: var(--navbar-height);
+  /* Viewport height minus fixed navbar to avoid double gap */
+  height: calc(100vh - var(--navbar-height));
+  margin-top: 40px;
   background: linear-gradient(120deg, rgba(0, 36, 0, 0.7), rgba(88, 100, 29, 0.6)), url('/xingye.jpg');
   background-position: center top;
   background-size: cover;
@@ -18,13 +19,13 @@
   animation: fadeIn 2s ease-in-out;
   background: rgba(0, 0, 0, 0.25);
   border-radius: 16px;
-  padding: 1.5rem;
+  padding: 2rem;
   backdrop-filter: blur(6px);
 }
 
 .hero h1 {
   font-size: 3.5rem;
-  margin-bottom: 0.5rem;
+  margin: 0 0 0.75rem 0;
   letter-spacing: 1px;
 }
 
@@ -43,12 +44,13 @@
 
 .cta-button {
   padding: 0.8rem 1.6rem;
-  background-color: var(--burgundy);
+  background-color: #8b1e1e;
   color: var(--nearwhite);
   font-weight: bold;
   border-radius: 25px;
   text-decoration: none;
   transition: all 0.3s ease;
+  display: inline-block;
 }
 
 .cta-button:hover {

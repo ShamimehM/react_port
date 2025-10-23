@@ -3,37 +3,39 @@ import './styles/App.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import About from './components/About';
-import Education from './components/Education';
-import Experience from './components/Experience';
-import Skills from './components/Skills';
-import Projects from './components/Projects';
-import LinkedInPosts from './components/LinkedInPosts';
-import Certifications from './components/Certfications';
-import Contact from './components/Contact';
-import Counter from './components/Counter';
-import Products from './Products';
+import Home from './pages/Home';
+import Forest from './pages/Forest';
+import ContactPage from './pages/ContactPage';
+import { useLocation } from 'react-router-dom';
 
 const App = () => {
+  const location = useLocation();
+
   useEffect(() => {
     AOS.init({ duration: 1200, once: true});
   }, []);
+
+  useEffect(() => {
+    const controller = new AbortController();
+    const path = location.pathname || '/';
+    fetch('/api/track', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ path }),
+      signal: controller.signal
+    }).catch(() => {});
+    return () => controller.abort();
+  }, [location.pathname]);
   return (
     <>
       <Navbar />
-      <div className="app-container">
-        <Hero />
-        <About />
-        <Education />
-        <Experience />
-        <Skills />
-        <Projects />
-        <LinkedInPosts />
-        <Certifications />
-        <Contact />
-      </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/forest" element={<Forest />} />
+        <Route path="/contact" element={<ContactPage />} />
+      </Routes>
     </>
   );
 };
