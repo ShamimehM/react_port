@@ -11,7 +11,7 @@ const About = () => (
       </div>
       <div className="about-text">
         <p>
-          I’m Shamimeh M. Nav, a researcher and AI developer based in Moss, Norway. My work centers on building trustworthy, human-centered AI—
+          I’m Shamimeh M. Nav, a researcher and AI developer based in Norway. My work centers on building trustworthy, human-centered AI—
           with experience across machine learning, deep learning, and data-driven experimentation.
         </p>
         <p>
