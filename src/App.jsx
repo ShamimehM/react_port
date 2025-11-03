@@ -8,6 +8,7 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Forest from './pages/Forest';
 import ContactPage from './pages/ContactPage';
+import CommunicationPreferences from './pages/CommunicationPreferences';
 import { useLocation } from 'react-router-dom';
 
 const App = () => {
@@ -35,6 +36,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/forest" element={<Forest />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/communication-preferences" element={<CommunicationPreferences />} />
       </Routes>
     </>
   );

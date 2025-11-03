@@ -76,8 +76,9 @@ const Contact = () => (
       </div>
     </div>
 
-    <div style={{ marginTop: '1rem' }}>
+    <div style={{ marginTop: '1rem', display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
       <Link to="/contact" className="cta-button">Contact Me</Link>
+      <Link to="/communication-preferences" className="cta-button" aria-label="Read my communication preferences">Communication Preferences</Link>
     </div>
 
     <div className="github-widget">

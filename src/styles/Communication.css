@@ -1,0 +1,54 @@
+.comm-page {
+  padding: 3rem 1.25rem;
+  background: var(--nearwhite);
+  color: var(--ink);
+}
+
+.comm-container {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.comm-header h1 {
+  padding-top: 4rem;
+  font-size: 2.2rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.comm-note {
+  color: #555;
+  margin: 0 0 1.5rem 0;
+}
+
+.comm-section + .comm-section {
+  margin-top: 2rem;
+}
+
+.comm-section h2 {
+  font-size: 1.5rem;
+  margin: 0 0 0.75rem 0;
+}
+
+.comm-section ul {
+  padding-left: 1.25rem;
+  line-height: 1.7;
+}
+
+.comm-section li {
+  margin: 0.4rem 0;
+}
+
+/* Dark mode */
+.dark .comm-page {
+  background: #0d1117;
+  color: #e6edf3;
+}
+
+.dark .comm-note { color: #9fb0a2; }
+
+@media (max-width: 700px) {
+  .comm-header h1 { font-size: 1.8rem; }
+}
+
+
+

@@ -42,6 +42,15 @@ const LinkedInPosts = () => {
           </motion.div>
         ))}
       </div>
+
+      <a
+        href="https://www.linkedin.com/in/shamimeh-mn/recent-activity/all/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="view-btn see-more-btn"
+      >
+        {" see more..."}
+      </a>
     </section>
   );
 };
