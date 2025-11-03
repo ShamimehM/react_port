@@ -7,10 +7,14 @@ const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, {
 });
 
 function parsePath(path) {
-  // Expected: /api/media/:bucket/:key
-  const parts = path.split('/').filter(Boolean);
-  const bucket = parts[2];
-  const key = decodeURIComponent(parts.slice(3).join('/'));
+  // Works for both:
+  //  - /api/media/:bucket/:key                    (after Netlify redirect)
+  //  - /.netlify/functions/media/:bucket/:key     (direct function path)
+  const segments = path.split('/').filter(Boolean);
+  const fnIndex = segments.indexOf('media');
+  if (fnIndex === -1) return { bucket: undefined, key: undefined };
+  const bucket = segments[fnIndex + 1];
+  const key = decodeURIComponent(segments.slice(fnIndex + 2).join('/'));
   return { bucket, key };
 }
 
