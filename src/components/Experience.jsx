@@ -6,7 +6,7 @@ const Experience = () => (
     <h2>Experience</h2>
     <ul>
       <li>
-        <strong>AI Developer Intern</strong>, SOMEBODYMAKEIT AS, Oslo — Aug 2025 – Present
+        <strong>AI Developer Intern</strong>, SOMEBODYMAKEIT AS, Oslo — Aug 2025 – Oct 2025
       </li>
       <li>
         <strong>Research Assistant</strong>, Oslo Metropolitan University — Mar 2024 – Jul 2025

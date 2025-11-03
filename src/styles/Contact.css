@@ -5,6 +5,57 @@
   .contact h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
+    margin-top: 2rem;
+  }
+  
+  /* Two-column layout for contact details and icon links */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: start;
+    column-gap: 2rem; /* closer columns */
+    row-gap: 1rem;
+    margin-top: 1rem;
+  }
+  .contact-title { display: flex; align-items: flex-start; }
+  
+  .contact-left p {
+    margin: 0.25rem 0;
+    line-height: 1.7;
+  }
+  
+  .contact-email {
+    color: var(--olive);
+    text-decoration: none;
+    border-bottom: 1px dotted rgba(0,0,0,0.2);
+  }
+  .contact-email:hover { text-decoration: underline; }
+  
+  .contact-icons {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .icon-item { display: flex; flex-direction: column; align-items: center; gap: 0.35rem; }
+  .icon-label { font-size: 0.8rem; color: var(--ink); }
+  
+  .icon-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+    border: 1px solid rgba(0,0,0,0.15);
+    color: var(--olive);
+    background: #ffffff;
+    text-decoration: none;
+    transition: transform 120ms ease, box-shadow 120ms ease, background-color 120ms ease, color 120ms ease, border-color 120ms ease;
+  }
+  .icon-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+    border-color: var(--olive);
   }
   .contact .links {
     margin-top: 1rem;
@@ -27,4 +78,35 @@
     max-width: 100%;
     margin-top: 1rem;
   }
+  
+  /* Responsive: stack columns on small screens */
+  @media (max-width: 700px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+    }
+    .contact-right { margin-top: 0.25rem; }
+  }
+  
+  /* Dark mode: improve contrast */
+  .dark .contact {
+    background-color: #0d1117; /* GitHub dark */
+    color: #e6edf3; /* Accessible light */
+  }
+  .dark .contact h2 { color: #cdd9e5; }
+  .dark .contact .contact-email {
+    color: #c3d6b8; /* lighter olive */
+    border-bottom-color: rgba(255,255,255,0.25);
+  }
+  .dark .contact .icon-link {
+    color: #e6edf3;
+    background: rgba(255,255,255,0.04);
+    border-color: rgba(230,237,243,0.22);
+  }
+  .dark .contact .icon-link:hover {
+    color: #d0e3c4; /* pale green */
+    border-color: #d0e3c4;
+    background: rgba(208,227,196,0.08);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+  }
+  .dark .contact .icon-label { color: #cdd9e5; }
   
