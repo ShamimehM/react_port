@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/About.css';
+import { resolveMediaPath } from '../utils/paths';
 
 
 const About = () => (
@@ -7,7 +8,7 @@ const About = () => (
     <h2>About Me</h2>
     <div className="about-layout">
       <div className="about-photo-wrap">
-        <img src="/api/media/media/2.jpg" alt="Profile" className="about-photo" />
+        <img src={resolveMediaPath('/api/media/media/2.jpg')} alt="Profile" className="about-photo" />
       </div>
       <div className="about-text">
         <p>

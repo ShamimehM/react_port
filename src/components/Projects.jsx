@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/Projects.css';
 import { motion } from 'framer-motion';
+import { resolveMediaPath } from '../utils/paths';
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
@@ -56,7 +57,7 @@ const Projects = () => {
           >
             {proj.cover && (
               <div className="project-image">
-                <img src={proj.cover} alt={`${proj.title} cover`} />
+                <img src={resolveMediaPath(proj.cover)} alt={`${proj.title} cover`} />
               </div>
             )}
             <h3>{proj.title}</h3>
@@ -86,7 +87,7 @@ const Projects = () => {
 
             {selectedProject.cover && (
               <div className="modal-cover">
-                <img src={selectedProject.cover} alt={`${selectedProject.title} cover`} />
+                <img src={resolveMediaPath(selectedProject.cover)} alt={`${selectedProject.title} cover`} />
               </div>
             )}
 
@@ -126,7 +127,7 @@ const Projects = () => {
                 })()}
                 {selectedProject.link && (
                   <a
-                    href={selectedProject.link}
+                    href={resolveMediaPath(selectedProject.link)}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="view-btn outline"

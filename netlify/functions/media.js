@@ -23,6 +23,17 @@ export async function handler(event) {
     return { statusCode: 405, body: 'Method Not Allowed' };
   }
   try {
+    const debug = event?.queryStringParameters?.debug === '1' || event?.headers?.['x-debug'] === '1';
+    if (debug && (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY)) {
+      return {
+        statusCode: 500,
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          stage: 'env',
+          message: 'Missing SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY in function environment'
+        })
+      };
+    }
     const { bucket, key } = parsePath(event.path);
     if (!bucket || !key) return { statusCode: 400, body: 'Bad request' };
 
@@ -35,11 +46,27 @@ export async function handler(event) {
     const { data: signed, error: signErr } = await supabase.storage.from(bucket).createSignedUrl(key, 60);
     if (signErr || !signed?.signedUrl) {
       console.error('signed url error', signErr);
+      if (debug) {
+        return {
+          statusCode: 404,
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ stage: 'sign', bucket, key, message: signErr?.message, details: signErr?.details, hint: signErr?.hint })
+        };
+      }
       return { statusCode: 404, body: 'Not found' };
     }
 
     const res = await fetch(signed.signedUrl);
-    if (!res.ok) return { statusCode: res.status, body: 'Upstream error' };
+    if (!res.ok) {
+      if (debug) {
+        return {
+          statusCode: res.status,
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ stage: 'fetch', bucket, key, upstreamStatus: res.status })
+        };
+      }
+      return { statusCode: res.status, body: 'Upstream error' };
+    }
     const contentType = res.headers.get('content-type') || 'application/octet-stream';
     const arrayBuffer = await res.arrayBuffer();
     const base64 = Buffer.from(arrayBuffer).toString('base64');
@@ -56,6 +83,13 @@ export async function handler(event) {
     };
   } catch (e) {
     console.error(e);
+    if (event?.queryStringParameters?.debug === '1' || event?.headers?.['x-debug'] === '1') {
+      return {
+        statusCode: 500,
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ stage: 'catch', message: e?.message })
+      };
+    }
     return { statusCode: 500, body: 'Server error' };
   }
 }
