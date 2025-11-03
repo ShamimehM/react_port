@@ -14,7 +14,7 @@ const Contact = () => (
       </div>
 
       <div className="contact-left">
-        <p><strong>Name:</strong> Shamimeh M. Nav</p>
+        <p><strong>Name:</strong> Shamimeh Mohajeri Nav</p>
         <p><strong>Email:</strong> <a className="contact-email" href="mailto:shamimehmohajeri@gmail.com">shamimehmohajeri@gmail.com</a></p>
         <p><strong>Location:</strong> Norway</p>
       </div>
