@@ -7,7 +7,7 @@ const About = () => (
     <h2>About Me</h2>
     <div className="about-layout">
       <div className="about-photo-wrap">
-        <img src="https://hhngmzdxparywofyoiqc.supabase.co/storage/v1/object/sign/media/2.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOGUwMWIyNC02OTNhLTRmZmYtOTcyMy1mMzM4N2Y0Y2RiNmYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJtZWRpYS8yLmpwZyIsImlhdCI6MTc2MjE3NDAwNSwiZXhwIjoxODI1MjQ2MDA1fQ.IpCmAtCs8mUvcKHdCIWmAdVO57MdZfXW5OsTYSsKnQY" alt="Profile" className="about-photo" />
+        <img src="/api/media/media/2.jpg" alt="Profile" className="about-photo" />
       </div>
       <div className="about-text">
         <p>

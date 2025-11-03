@@ -14,10 +14,10 @@
                 "Highlighted the importance of preserving data diversity in physiological biometrics preprocessing",
                 "Discussed implications for scalable, real-time, resource-constrained biometric authentication systems"
             ],
-            "cover": "https://hhngmzdxparywofyoiqc.supabase.co/storage/v1/object/sign/media/thesisCover.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOGUwMWIyNC02OTNhLTRmZmYtOTcyMy1mMzM4N2Y0Y2RiNmYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJtZWRpYS90aGVzaXNDb3Zlci5wbmciLCJpYXQiOjE3NjIxNzY0MjgsImV4cCI6MTgyNTI0ODQyOH0._TcQMbwM0vSIOQMu4ke4CErLeADywP81Xtv5B9Odk9k",
+            "cover": "/api/media/media/thesisCover.png",
             "readMore": "",
             "eventLink": "https://oda.oslomet.no/oda-xmlui/handle/11250/3206159",
-            "link": "https://hhngmzdxparywofyoiqc.supabase.co/storage/v1/object/sign/documents/Thesis%20Presentation.pdf?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOGUwMWIyNC02OTNhLTRmZmYtOTcyMy1mMzM4N2Y0Y2RiNmYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJkb2N1bWVudHMvVGhlc2lzIFByZXNlbnRhdGlvbi5wZGYiLCJpYXQiOjE3NjIxNzcxMDksImV4cCI6MTgyNTI0OTEwOX0.ojVvd6iMdcW-sF-efo1rvMXbPlWAww1oVUEaXIDZnqc"
+            "link": "/api/media/documents/Thesis%20Presentation.pdf"
         },
         {
             "title": "3D Geometry Reconstruction with NeRF",
@@ -42,7 +42,7 @@
                 "Designed and tested with user feedback",
                 "Implemented activity tracking and rewards"
             ],
-            "cover": "https://hhngmzdxparywofyoiqc.supabase.co/storage/v1/object/sign/media/KiddyQuest.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOGUwMWIyNC02OTNhLTRmZmYtOTcyMy1mMzM4N2Y0Y2RiNmYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJtZWRpYS9LaWRkeVF1ZXN0LmpwZyIsImlhdCI6MTc2MjE3NDA2NiwiZXhwIjoxODI1MjQ2MDY2fQ.TCX02n104PHi_G5Ng8s1lzQ3j9dh1w2a5SJ4a1QlBJE",
+            "cover": "/api/media/media/KiddyQuest.jpg",
             "readMore": "",
             "eventLink": "",
             "link": "https://github.com/ShamimehM/Human-Computer-interaction"
