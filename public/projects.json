@@ -1,60 +1,116 @@
     [
         {
-            "title": "Biometric Authentication with EEG & Eye-Tracking",
-            "description": "Explored reliability of EEG and eye-tracking signals for biometric authentication; compared unimodal and multimodal approaches.",
-            "techStack": ["Python", "Scikit-learn", "PyTorch", "EEGNet", "CNN", "InceptionTime"],
+            "title": "Master Thesis: Exploring the Reliability of EEG and Eye-Tracking for Biometric Authentication",
+            "period": "Jan 2025 - Jun 2025",
+            "description": "Explored reliability of EEG and eye-tracking signals for biometric authentication; compared unimodal and multimodal approaches for their strengths, limitations, and benefits.",
+            "description2": "This thesis investigates the effectiveness of electroencephalography (EEG) and eye-tracking data, individually and in combination, for biometric user authentication. Using the EEGEyeNet dataset, which contains both EEG and eye-tracking recordings, the original eye-movement prediction task was restructured to focus on identity detection. A range of classical machine learning (ML) models and deep learning (DL) architectures were evaluated under both minimally and maximally preprocessed conditions, and implemented in both PyTorch and TensorFlow to ensure framework consistency. The results demonstrate that simple ML models such as Gaussian Naive Bayes (GaussianNB) and k-Nearest Neighbors (KNN) consistently outperformed more complex models, including support vector machines (SVMs) and DL networks, in terms of both accuracy and computational efficiency. Surprisingly, models trained on minimally preprocessed data yielded better performance than those using heavily cleaned signals, suggesting that aggressive artifact removal can eliminate identity-relevant information. Notably, combining EEG and eye-tracking features led to significant performance gains, highlighting the value of multimodal approaches for capturing robust biometric signatures. These findings underscore the potential of lightweight ML classifiers for real-time, resource-constrained biometric systems and emphasize the importance of preserving signal diversity during preprocessing. The study also raises questions about the scalability of current models and the need for fine-tuned DL architectures in future multimodal systems. Overall, this work provides practical insights into model selection, preprocessing strategies, and system design for physiology-based biometric authentication.",
+            "techStack": ["Python", "Pycharm", "PyTorch", "Tensorflow", "Pandas", "numpy", "Matplotlib", "Scikit-learn", "EEGNet", "CNN", "InceptionTime"],
             "achievements": [
-                "Implemented GaussianNB, Linear/Ridge Regression, Lasso, ElasticNet, GradientBoost, AdaBoost, XGBoost",
-                "Prototyped DL models: CNN, EEGNet, InceptionTime, PyramidalCNN, Xception",
-                "Benchmarked modality-specific vs. hybrid performance"
+                "Implemented and benchmarked a spectrum of ML and DL models: GaussianNB, KNN, SVM, Linear/Ridge Regression, Lasso, ElasticNet, GradientBoost, AdaBoost, XGBoost",
+                "Prototyped and tested several DL architectures: CNN, EEGNet, InceptionTime, PyramidalCNN, Xception in both PyTorch and TensorFlow",
+                "Benchmarked unimodal (EEG or eye-tracking) vs. multimodal (combined) systems",
+                "Demonstrated that lightweight ML models (GaussianNB, KNN) can outperform SVMs and DL in both accuracy and efficiency for identity detection",
+                "Showed that minimal preprocessing on raw signals improves model performance over heavily cleaned data",
+                "Highlighted the importance of preserving data diversity in physiological biometrics preprocessing",
+                "Discussed implications for scalable, real-time, resource-constrained biometric authentication systems"
             ],
-            "link": ""
+            "cover": "https://hhngmzdxparywofyoiqc.supabase.co/storage/v1/object/sign/media/thesisCover.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOGUwMWIyNC02OTNhLTRmZmYtOTcyMy1mMzM4N2Y0Y2RiNmYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJtZWRpYS90aGVzaXNDb3Zlci5wbmciLCJpYXQiOjE3NjIxNzY0MjgsImV4cCI6MTgyNTI0ODQyOH0._TcQMbwM0vSIOQMu4ke4CErLeADywP81Xtv5B9Odk9k",
+            "readMore": "",
+            "eventLink": "https://oda.oslomet.no/oda-xmlui/handle/11250/3206159",
+            "link": "https://hhngmzdxparywofyoiqc.supabase.co/storage/v1/object/sign/documents/Thesis%20Presentation.pdf?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOGUwMWIyNC02OTNhLTRmZmYtOTcyMy1mMzM4N2Y0Y2RiNmYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJkb2N1bWVudHMvVGhlc2lzIFByZXNlbnRhdGlvbi5wZGYiLCJpYXQiOjE3NjIxNzcxMDksImV4cCI6MTgyNTI0OTEwOX0.ojVvd6iMdcW-sF-efo1rvMXbPlWAww1oVUEaXIDZnqc"
         },
         {
             "title": "3D Geometry Reconstruction with NeRF",
             "description": "Built NeRF-based pipelines for 3D reconstruction; integrated PyTorch3D, Open3D, and Chamfer Distance evaluation.",
+            "description2": "",
             "techStack": ["NeRF", "PyTorch3D", "Open3D", "Depth Estimation"],
             "achievements": [
                 "Generated meshes from radiance fields and depth cues",
                 "Compared implicit vs. explicit rendering trade-offs"
             ],
+            "cover": "https://media.licdn.com/dms/image/v2/D4D22AQFGcfXrHdmHdQ/feedshare-shrink_480/B4DZPBTqsnHcAY-/0/1734114979193?e=1763596800&v=beta&t=tgj4dttFd6yOpi-cPLL_fxFTVo9DJoRiajQKA0AB_Wo",
+            "readMore": "",
+            "eventLink": "https://www.linkedin.com/posts/shamimeh-mn_machinelearning-nerf-teamwork-activity-7273405404208910337-tktx?utm_source=share&utm_medium=member_desktop&rcm=ACoAABMXPPMB_wATFlL3OUxfSkgzg-RZvtUnmv8",
             "link": ""
         },
         {
             "title": "AI-driven Healthy Habits App for Children",
             "description": "Mobile app with customizable avatars, activity tracking, and gamification; validated with participatory design.",
+            "description2": "",
             "techStack": ["HTML", "CSS", "JavaScript", "Azure SQL"],
             "achievements": [
                 "Designed and tested with user feedback",
                 "Implemented activity tracking and rewards"
             ],
-            "link": ""
+            "cover": "https://hhngmzdxparywofyoiqc.supabase.co/storage/v1/object/sign/media/KiddyQuest.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOGUwMWIyNC02OTNhLTRmZmYtOTcyMy1mMzM4N2Y0Y2RiNmYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJtZWRpYS9LaWRkeVF1ZXN0LmpwZyIsImlhdCI6MTc2MjE3NDA2NiwiZXhwIjoxODI1MjQ2MDY2fQ.TCX02n104PHi_G5Ng8s1lzQ3j9dh1w2a5SJ4a1QlBJE",
+            "readMore": "",
+            "eventLink": "",
+            "link": "https://github.com/ShamimehM/Human-Computer-interaction"
         },
         {
             "title": "Norwegian Psychology Support Bot (Meta Hackathon)",
             "description": "Built an LLM-powered assistant using Llama for Norwegian real-time advice; presented at Meta Hackathon (Feb 2025).",
-            "techStack": ["Llama", "LLM", "Prompt Engineering"],
+            "description2": "",
+            "techStack": ["Llama", "LLM", "Prompt Engineering", "Python"],
             "achievements": [
-                "Prototype demonstrating AI mental health support"
+                "Prototype demonstrating AI mental health support",
+                "Collaborated with Meta, Cerebral Valley, and Nebius AI",
+                "Used prompt engineering with Llama for Norwegian language support"
             ],
-            "link": ""
+            "cover": "https://media.licdn.com/dms/image/v2/D4D22AQH7cdDBpMu1Lw/feedshare-shrink_2048_1536/B4DZTTNEX0HYAo-/0/1738710210051?e=1763596800&v=beta&t=hCFYxhmYY7OpClI2o_R5nan_SiAMzmhYALwiZWUwTkA",
+            "readMore": "",
+            "eventLink": "https://hackathons.cerebralvalley.ai/hackathon/meta-llama-hackathon-oslo-tbl3RK6agYbmXql1d",
+            "link": "https://github.com/The-begining/meta"
         },
+
+        {
+            "title": "News Classification with OpenAI",
+            "description": "Classifying news articles into categories using OpenAI's API.",
+            "description2": "This project is a simple example of how to use OpenAI's API to classify news articles into different categories. This was originally a case assiagnment for a job interview. My code devides the whole article into paragraphs, each paragraph has a different topic, and the models reads each paragraph to classify the article into the correct category.",
+            "techStack": ["Python", "OpenAI", "API", "prompt engineering"],
+            "achievements": [
+                "Classified news articles into different categories",
+                "Used prompt engineering with OpenAI's gpt-4o-mini"
+            ],
+            "cover": "https://cdn-icons-png.freepik.com/512/7108/7108096.png",
+            "readMore": "",
+            "eventLink": "",
+            "link": "https://github.com/ShamimehM/news-classification-with-openai/commit/178eaf8c11ed853f6bec8720355d100c9daa65db"
+        },
+
         {
             "title": "Medical Imaging Super-Resolution",
-            "description": "Implemented ESRGAN and EDSR super-resolution models for pathology images to enhance diagnostic quality.",
+            "description": "Implemented ESRGAN and EDSR super-resolution models for pathology images to enhance diagnostic quality, using BCI dataset.",
+            "description2": "",
             "techStack": ["PyTorch", "ESRGAN", "EDSR"],
             "achievements": [
                 "Improved resolution and visual quality for analysis"
             ],
+            "cover": "https://bupt-ai-cz.github.io/BCI/imgs/datasetpreview5.png",
+            "readMore": "",
+            "eventLink": "",
             "link": ""
         },
         {
-            "title": "Evolutionary Algorithms & Optimization",
-            "description": "Applied GA, Bees, Particle Swarm, and Ant Colony Optimization to N-Queen and TSP problems.",
-            "techStack": ["Python", "GA", "PSO", "ACO"],
-            "achievements": [
-                "Evaluated solution quality and runtime trade-offs"
+            "title": "Evolutionary Algorithms for Optimization Problems",
+            "description": "Implemented Genetic Algorithms, Particle Swarm Optimization, and Ant Colony Optimization to tackle classical problems like the N-Queen puzzle and the Traveling Salesman Problem, exploring computational efficiency in AI-driven solutions.",
+            "description2": "Project at OsloMet – Oslo Metropolitan University. Investigated various evolutionary algorithms and their applications to solve combinatorial optimization tasks. Explored solution quality and runtime trade-offs for Genetic Algorithm (GA), Particle Swarm Optimization (PSO), and Ant Colony Optimization (ACO).",
+            "techStack": [
+                "Python",
+                "Genetic Algorithm (GA)",
+                "Particle Swarm Optimization (PSO)",
+                "Ant Colony Optimization (ACO)",
+                "Problem Solving",
+                "Optimization Techniques",
+                "Evolutionary Algorithms"
             ],
+            "achievements": [
+                "Evaluated computational efficiency and performance on N-Queen and TSP",
+                "Explored solution quality versus runtime trade-offs"
+            ],
+            "cover": "https://esa.github.io/pagmo2/_images/sea.png",
+            "readMore": "",
+            "eventLink": "",
             "link": ""
         }
     ]

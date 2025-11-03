@@ -9,6 +9,15 @@
   margin-bottom: 2rem;
 }
 
+/* LinkedIn posts section should match Certifications styling */
+#posts.projects {
+  background-color: var(--pale);
+}
+
+#posts.projects h2 {
+  color: var(--olive);
+}
+
 .project-grid {
   display: grid;
   gap: 2rem;
@@ -22,6 +31,7 @@
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 }
 
 .project-card h3 {
@@ -77,4 +87,104 @@
 .achievement-list li {
   margin-bottom: 0.3rem;
   list-style-type: disc;
+}
+
+/* See more button under LinkedInPosts */
+.see-more-btn {
+  display: block;
+  width: 100%;
+  max-width: none;
+  margin: 2rem 0 0;
+  padding: 1rem 1.25rem;
+  font-weight: 600;
+  background-color: var(--pale);
+  color: var(--olive);
+}
+
+.see-more-btn:hover {
+  background-color: var(--pale);
+}
+
+/* Cover image on cards */
+.project-image {
+  margin: -0.5rem -0.5rem 1rem;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.card-actions {
+  margin-top: auto;
+}
+
+/* Modal */
+.project-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  z-index: 1000;
+}
+
+.project-modal {
+  position: relative;
+  background: var(--nearwhite);
+  border-radius: 12px;
+  max-width: 960px;
+  width: 100%;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 1.8rem;
+  line-height: 1;
+  cursor: pointer;
+  color: #333;
+}
+
+.modal-cover img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+}
+
+.modal-content {
+  padding: 1.25rem 1.5rem 1.5rem;
+}
+
+.modal-description {
+  margin-top: 0.5rem;
+}
+
+.modal-tech {
+  margin-top: 0.75rem;
+}
+
+.modal-actions {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.view-btn.outline {
+  background: transparent;
+  color: var(--burgundy);
+  border: 1px solid var(--burgundy);
 }
