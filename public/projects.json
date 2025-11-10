@@ -113,4 +113,38 @@
             "eventLink": "",
             "link": ""
         }
+,
+
+        {
+            "title": "GEM-HD: Gaze-based Early Mental Health Detection (ACMMM 2025 Hackathon)",
+            "description": "Turns webcam eye behavior into per-second features to predict engagement with uncertainty; live Streamlit dashboard and clinical-style reports.",
+            "description2": "GEM-HD converts webcam gaze signals into tabular features (fixations, saccades, blinks, scanpath entropy) and predicts a continuous engagement score with Monte Carlo Dropout and Conformal Prediction for calibrated uncertainty. Includes feature extraction pipelines, TinyMLP and multimodal models, drift/feedback analysis, and an auto-generated model card with a live Streamlit dashboard.",
+            "techStack": ["Python", "PyTorch", "Streamlit", "Pandas", "NumPy", "Scikit-learn", "OpenCV", "Matplotlib", "Conformal Prediction", "MC Dropout"],
+            "achievements": [
+                "Built live webcam dashboard with calibrated uncertainty and risk labels",
+                "Implemented feature extraction and TinyMLP/multimodal models",
+                "Generated model card and drift/feedback summaries"
+            ],
+            "cover": "https://github.com/IamRabin/GEM-HD/raw/master/results/figures/GEM.png",
+            "readMore": "",
+            "eventLink": "https://acmmm2025.org/hackathon/",
+            "link": "https://github.com/IamRabin/GEM-HD"
+        }
+,
+
+        {
+            "title": "Job Application Agent (MadHack)",
+            "description": "Autonomous agent that searches jobs, scrapes descriptions, tailors materials, and auto-fills applications.",
+            "description2": "A Node.js-based agent that automates the end-to-end job application workflow: multi-platform job search (LinkedIn, Indeed), job description parsing and GPT-4 summarization, resume and cover letter tailoring, and intelligent form filling with optional human approval. Includes comprehensive logging, status tracking, and cloud execution support.",
+            "techStack": ["Node.js", "Express", "Puppeteer", "OpenAI", "Cheerio", "Nodemailer", "ExcelJS", "CSV", "Winston", "dotenv"],
+            "achievements": [
+                "Automated multi-platform job search and scraping",
+                "Generated tailored resumes and cover letters via GPT-4",
+                "Implemented safe form filling with approval and detailed logging"
+            ],
+            "cover": "https://media.licdn.com/dms/image/v2/D4D22AQFGkHEa8aHzuA/feedshare-shrink_2048_1536/B4DZZ88pq4G0A4-/0/1745853020216?e=1764201600&v=beta&t=1ku1Zz-55wWRIfxq0-D_6EXpqQ3LDvt28Nv8UL6n0Jc",
+            "readMore": "",
+            "eventLink": "",
+            "link": ""
+        }
     ]
