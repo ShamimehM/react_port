@@ -1,0 +1,88 @@
+[
+  {
+    "roleTitle": "Researcher",
+    "company": "OsloMet – Oslo Metropolitan University",
+    "location": "Oslo, Norway",
+    "start": "2025-09",
+    "end": "Present",
+    "bullets": [
+      "Collecting and managing eye-tracking and EEG data for research studies.",
+      "Calibrating equipment and maintaining data quality and experimental rigor."
+    ]
+  },
+  {
+    "roleTitle": "AI Developer Intern",
+    "company": "SOMEBODYMAKEIT AS",
+    "location": "Oslo, Norway (Remote)",
+    "start": "2025-08",
+    "end": "2025-10",
+    "bullets": [
+      "Developed an AI-driven matchmaking system using OpenAI embeddings and cosine similarity.",
+      "Built an AI profile assistant that analyzed screenshots and text to auto-generate and complete user profiles.",
+      "Created an AI idea generator to craft detailed idea descriptions and step-by-step plans.",
+      "Contributed to design and testing of AI-powered UX features for scalability and reliability.",
+      "Optimized AI pipelines to ensure smooth integration and consistent model performance."
+    ]
+  },
+  {
+    "roleTitle": "Research Assistant",
+    "company": "OsloMet – Oslo Metropolitan University",
+    "location": "Oslo, Norway",
+    "start": "2024-03",
+    "end": "2025-07",
+    "bullets": [
+      "Recruited 130+ participants (from 75 to 205+), improving retention for follow-up data collection.",
+      "Scheduled and ran eye-tracking experiments; calibrated sensors and ensured protocol adherence.",
+      "Guided participants, answered questions, and managed incentives to maximize engagement.",
+      "Collaborated with research staff to maintain efficient workflows and data accuracy."
+    ]
+  },
+  {
+    "roleTitle": "Teacher Assistant",
+    "company": "OsloMet – Oslo Metropolitan University",
+    "location": "Norway",
+    "start": "2024-08",
+    "end": "2024-12",
+    "bullets": [
+      "Taught lab sessions for the Evolutionary Artificial Intelligence and Robotics course."
+    ]
+  },
+  {
+    "roleTitle": "Co-owner, Entrepreneur, and Marketing Manager",
+    "company": "Gavazne Abi",
+    "location": "Iran",
+    "start": "2020-01",
+    "end": "2023-07",
+    "bullets": [
+      "Doubled social media following, increasing brand awareness and engagement.",
+      "Achieved a 10× increase in sales by expanding to new online platforms.",
+      "Developed and executed strategic marketing campaigns for acquisition and retention.",
+      "Created high-quality content and managed brand storytelling across media.",
+      "Spearheaded branding efforts and team growth, navigating economic challenges."
+    ]
+  },
+  {
+    "roleTitle": "Content Writer and Translator (Freelance)",
+    "company": "Freelance",
+    "location": "Isfahan, Iran",
+    "start": "2020-04",
+    "end": "2020-11",
+    "bullets": [
+      "Provided creative content writing and translation services for various clients.",
+      "Met deadlines and maintained high quality across diverse domains."
+    ]
+  },
+  {
+    "roleTitle": "Lab Assistant",
+    "company": "University of Isfahan",
+    "location": "Isfahan, Iran",
+    "start": "2019-09",
+    "end": "2020-07",
+    "bullets": [
+      "Maintained and updated department labs' computers and electronic devices.",
+      "Installed and troubleshot software as required by faculty and staff."
+    ]
+  }
+]
+
+
