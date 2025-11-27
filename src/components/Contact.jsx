@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/Contact.css';
-import CVPdf from '../../CV/CV-Shamimeh.pdf';
 import { Link } from 'react-router-dom';
+import { resolveMediaPath } from '../utils/paths';
 // add icons for linkedin and github 
 // darkmood icon for the page, the colors don't work
 // linkin post links 
@@ -58,7 +58,7 @@ const Contact = () => (
           <div className="icon-item">
             <a
               className="icon-link"
-              href={CVPdf}
+              href={resolveMediaPath('/api/media/documents/CV-Shamimeh.pdf')}
               target="_blank"
               rel="noopener noreferrer"
               download

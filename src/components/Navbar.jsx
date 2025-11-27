@@ -1,7 +1,7 @@
 import React , {useState, useEffect}from 'react';
 import { Link } from 'react-router-dom';
-import CVPdf from '../../CV/CV-Shamimeh.pdf';
 import '../styles/Navbar.css';
+import { resolveMediaPath } from '../utils/paths';
 
 
 const Navbar = () => {
@@ -30,7 +30,7 @@ const Navbar = () => {
           <li><a href="#about">About</a></li>
           <li><Link to="/forest">Forest</Link></li>
           <li><Link to="/contact" className="cta-button nav-cv">Contact</Link></li>
-          <li><a href={CVPdf} download>CV</a></li>
+          <li><a href={resolveMediaPath('/api/media/documents/CV-Shamimeh.pdf')} download>CV</a></li>
         </ul>
 
       </div>
