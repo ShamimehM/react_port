@@ -59,16 +59,17 @@ export default function Forest() {
             </p>
 
             <div className="forest-fun">
-              <p>✨ Work in progress 🌱</p>
+              <p style={{ alignItems: 'center' }}>✨ Work in progress 🌱</p>
               <ul>
-                <li>weight training in gym </li>
-                <li>reading books</li>
-                <li>learning new things</li> 
+                <li>When I'm not online, I'm:</li>
+                <li style={{ marginLeft: '170px', textAlign: 'left' }}>- training in gym </li>
+                <li style={{ marginLeft: '170px', textAlign: 'left' }}>- reading books</li>
+                <li style={{ marginLeft: '170px', textAlign: 'left' }}>- learning new things</li> 
               </ul>
             </div>
 
             <p style={{ marginTop: '2rem', fontStyle: 'italic' }}>
-              Scroll down to walk deeper into the forest and see my crochet projects.
+              Scroll down to walk deeper into the forest.
             </p>
 
             <button className="back-btn" onClick={() => navigate('/')}>← Back to Portfolio</button>
