@@ -144,6 +144,43 @@ on conflict (id) do nothing;
 -- from the server. Do NOT enable public read.
 
 -- =============================
+-- Crochet projects (publicly readable portfolio content)
+-- =============================
+create table if not exists public.crochet_projects (
+  id uuid primary key default gen_random_uuid(),
+  created_at timestamptz not null default now(),
+  title text not null,
+  description text,
+  image_url text,
+  is_public boolean not null default true
+);
+
+alter table public.crochet_projects enable row level security;
+
+-- Allow anonymous SELECT of only public rows (safe for portfolio-style content)
+do $$ begin
+  if not exists (
+    select 1 from pg_policies
+    where schemaname = 'public'
+      and tablename = 'crochet_projects'
+      and policyname = 'crochet_projects_public_read'
+  ) then
+    create policy crochet_projects_public_read
+      on public.crochet_projects
+      for select
+      to anon
+      using (is_public = true);
+  end if;
+end $$;
+
+create index if not exists crochet_projects_created_at_idx
+  on public.crochet_projects (created_at desc);
+
+-- Example seed (run manually in SQL editor if you like):
+-- insert into public.crochet_projects (title, description, image_url)
+-- values ('Granny square bag', 'Colorful granny squares joined into a small shoulder bag.', '/crochet/granny-square-bag.jpg');
+
+-- =============================
 -- Optional helper: soft cleanup for very old views (run manually / via cron)
 -- =============================
 -- delete from public.page_views_daily where date < (now() at time zone 'utc')::date - interval '2 years';
